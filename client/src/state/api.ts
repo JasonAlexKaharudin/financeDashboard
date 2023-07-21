@@ -3,7 +3,7 @@ import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from '.
 
 
 export const api = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: "https://empty-morning-9725.fly.dev" }),
+    baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
     reducerPath: "main",
     tagTypes: ["Kpis", "Products", "Transactions"],
     endpoints: (build) => ({

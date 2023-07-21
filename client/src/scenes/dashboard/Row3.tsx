@@ -3,8 +3,7 @@ import DashboardBox from '@/components/DashboardBox';
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from "@/state/api";
 import { useMemo } from 'react';
 import { DataGrid, GridCellParams } from '@mui/x-data-grid';
-import { useTheme } from '@emotion/react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import FlexBetween from '@/components/FlexBetween';
 import { Cell, Pie, PieChart } from 'recharts';
 
@@ -171,7 +170,7 @@ const Row3 = () => {
                     paddingAngle={2}
                     dataKey="value"
                   >
-                    {data.map((entry, index) => (
+                    {data.map((_entry, index) => (
                       <Cell 
                         key={`cell-${index}`} 
                         fill={pieColors[index]} 

@@ -1,8 +1,7 @@
 import DashboardBox from "@/components/DashboardBox"
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api"
 import BoxHeader from "@/components/BoxHeader";
-import { Box, Typography } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
 import { 
   ResponsiveContainer,
@@ -138,7 +137,7 @@ const Row2 = () => {
               paddingAngle={2}
               dataKey="value"
             >
-              {pieData.map((entry, index) => (
+              {pieData.map((_entry, index) => (
                 <Cell 
                   key={`cell-${index}`} 
                   fill={pieColors[index]} 

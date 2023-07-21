@@ -1,22 +1,14 @@
 import { useGetKpisQuery } from '@/state/api';
-import { useTheme } from '@emotion/react';
-import { useMemo, useState } from 'react';
-import { Box, Button, Typography } from '@mui/material';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import createTheme from '@mui/material/styles';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { themeSettings } from '@/theme';
-import Navbar from '../navbar';
-import Dashboard from '../dashboard';
+import { useMemo, useState,  } from 'react';
+import { Box, Button, Typography, useTheme } from '@mui/material';
 import DashboardBox from '@/components/DashboardBox';
 import FlexBetween from '@/components/FlexBetween';
 import { CartesianGrid, Label, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import regression, { DataPoint } from "regression";
 
-type Props = {};
 
-const Predictions = (props: Props) => {
-    const {palette} = useTheme();
+const Predictions = () => {
+    const { palette } = useTheme();
     const [isPredictions, setIsPredictions] = useState(false);
     const { data: kpiData } = useGetKpisQuery();
 
@@ -25,7 +17,7 @@ const Predictions = (props: Props) => {
         const monthData = kpiData[0].monthlyData
         
         const formatted: Array<DataPoint> = monthData.map(
-            ({ month, revenue, expenses}, i: number) => {
+            ({ revenue }, i: number) => {
                 return [i, revenue]
             }
          )

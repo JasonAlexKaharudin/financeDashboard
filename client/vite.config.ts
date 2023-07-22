@@ -8,6 +8,10 @@ export default defineConfig({
   build: {
     outDir: 'public',
   },
+  define: {
+    "process.env": process.env,
+    ENV_KEY: process.env.VITE_BASE_URL
+  },
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }]
   }

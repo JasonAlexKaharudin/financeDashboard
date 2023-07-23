@@ -203,13 +203,9 @@ const Row3 = () => {
               margin='15px 5px 0px 5px'
               variant='h6'
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-              At ratione quaerat iure debitis provident odio, blanditiis qui praesentium voluptas, 
-              fuga ducimus corrupti exercitationem numquam distinctio accusantium. 
-              Libero corrupti mollitia corporis? Lorem ipsum dolor sit amet consectetur, 
-              adipisicing elit. Cumque dolores praesentium blanditiis ad eaque maxime laborum esse 
-              provident corporis architecto inventore saepe, tenetur fugiat adipisci 
-              voluptatibus dolore debitis impedit voluptates.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Eum nulla iure, cupiditate nostrum commodi id vero voluptatum. 
+              Accusantium blanditiis numquam rerum obcaecati, itaque voluptatem tempore doloribus aperiam deserunt, ipsum reiciendis.
             </Typography>
           </Box>
         </DashboardBox>
